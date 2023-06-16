@@ -1,0 +1,149 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: #fff;
+  font-size: 20px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: 100px 100px 100px; /*zorgt ervoor hoe breed de columns zijn*/
+  grid-template-rows: 100px 100px 100px; /*zorgt ervoor hoe lang de columns zijn*/
+  cursor: pointer;
+  position: relative;
+}
+
+.tile {
+  color: white;
+  font-size: 30px;
+  display: flex; /*zorgt ervoor dat alles in de midden staat*/
+  justify-content: center; /*zorgt ervoor dat alles in de midden staat*/
+  align-items: center; /*zorgt ervoor dat alles in de midden staat*/
+}
+
+.right-border {
+  border-right: 8px solid #fcd10f;
+}
+
+.bottom-border {
+  border-bottom: 8px solid #fcd10f;
+}
+
+.strike {
+  position: absolute;
+  background-color: darkred;
+
+}
+
+.strike-row-1 {
+  width: 100%;
+  height: 4px;
+  top: 15%;
+}
+.strike-row-2 {
+  width: 100%;
+  height: 4px;
+  top: 48%;
+}
+.strike-row-3 {
+  width: 100%;
+  height: 4px;
+  top: 83%;
+}
+.strike-column-1 {
+  height: 100%;
+  width: 4px;
+  left: 15%;
+}
+.strike-column-2 {
+  height: 100%;
+  width: 4px;
+  left: 48%;
+}
+.strike-column-3 {
+  height: 100%;
+  width: 4px;
+  left: 83%;
+}
+.strike-diagonal-1 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg); /*zorgt ervoor dat de diagonal in de goede plek staat*/
+}
+  .strike-diagonal-2 {
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(-45deg);  /*zorgt ervoor dat de diagonal in de goede plek staat*/
+  }
+
+h1 {
+  /* color: currentColor; */
+  font-family: monospace;
+  /* text-shadow: 2px 2px; */
+  color: #fff;
+  text-shadow: 1px 1px 2px darkred, 0 0 25px yellow , 0 0 5px #fcd10f;
+  text-align: center;
+}
+
+p {
+    /* color: currentColor; */
+    font-family: monospace;
+    /* text-shadow: 2px 2px; */
+    color: #fff;
+    text-shadow: 1px 1px 2px darkred, 0 0 25px yellow , 0 0 5px #fcd10f;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* h1:hover {
+  
+} */
+
+#game-over-area {
+  text-align: center;
+  border: 8px solid #fff;
+  padding: 50px;
+  width: 40%;
+  margin-top: 50px;
+  /* background-color: #fcd10f; */
+  color: #fff;
+}
+
+h2 {
+  color: white;
+  font-size: 40px;
+  margin-top: 0px;
+}
+
+button {
+  background-color: #fcd10f;
+  color: #000;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+}
+
+button:hover {
+  /* position: relative; */
+  /* bottom: 35px; */
+  /* bottom: 10px; */
+  transform: scale(0.88);
+  /* transition: all 0.3s ease; */
+
+}
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
